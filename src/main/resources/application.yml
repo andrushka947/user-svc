@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+#    database-platform: org.hibernate.dialect.MySQLInnoDBDialect
+  datasource:
+    url: "jdbc:mysql://605a1e8bc788:3306/university?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true"
+    username: "root"
+    password: "pass"
+    driver-class-name: com.mysql.jdbc.Driver
