@@ -1,23 +1,22 @@
 package com.master.degree.user_scv.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
-@Table(name = "specialities")
+@Table(name = "users")
 @Data
-public class Speciality {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonIgnore
     private Long id;
 
-    private int code;
+    private String email;
     private String name;
-    @Enumerated(EnumType.STRING)
-    private Faculty faculty;
+    private String surname;
+    private String password;
 
 }

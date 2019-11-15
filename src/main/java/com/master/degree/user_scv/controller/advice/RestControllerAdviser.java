@@ -1,6 +1,6 @@
 package com.master.degree.user_scv.controller.advice;
 
-import com.master.degree.user_scv.dto.ErrorResponse;
+import com.master.degree.user_scv.model.ErrorResponse;
 import com.master.degree.user_scv.exception.BadRequestException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;

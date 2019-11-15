@@ -1,4 +1,4 @@
-package com.master.degree.user_scv.dto;
+package com.master.degree.user_scv.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
