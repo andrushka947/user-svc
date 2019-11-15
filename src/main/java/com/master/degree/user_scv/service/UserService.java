@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -19,6 +20,10 @@ public class UserService {
 
     public User getByEmail(String email) {
         return userRepository.findByEmail(email);
+    }
+
+    public List<User> getAll() {
+        return userRepository.findAll();
     }
 
     public User save(UserSaveDto dto) {

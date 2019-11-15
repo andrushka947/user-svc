@@ -6,6 +6,8 @@ import com.master.degree.user_scv.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @AllArgsConstructor
 @RestController
 @RequestMapping(path = "/users")
@@ -13,9 +15,14 @@ public class UserController {
 
     private UserService userService;
 
-    @GetMapping
-    public User getBySpecialityAndYearOfStudy(@RequestParam("email") String email) {
+    @GetMapping(path = "/{email}")
+    public User getByEmail(@PathVariable("email") String email) {
         return userService.getByEmail(email);
+    }
+
+    @GetMapping
+    public List<User> getAll() {
+        return userService.getAll();
     }
 
     @PostMapping
@@ -23,8 +30,8 @@ public class UserController {
         return userService.save(userDto);
     }
 
-    @DeleteMapping
-    public void delete(@RequestParam("email") String email) {
+    @DeleteMapping("/{email}")
+    public void delete(@PathVariable("email") String email) {
         userService.delete(email);
     }
 
